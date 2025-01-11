@@ -1,0 +1,51 @@
+# Gradle Wrapper
+.gradle/
+build/
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Java build output
+*.class
+*.jar
+*.war
+*.ear
+
+# Eclipse
+.settings/
+.project
+.classpath
+
+# NetBeans
+.nb/
+
+# Logs
+*.log
+
+# Gradle specific
+.gradle/
+build/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+
+# JetBrains Rider
+.idea/
+.idea_modules/
+
+# Windows Installer files
+*.cab
+*.msi
+
+# Gradle's own directories
+.gradle/
