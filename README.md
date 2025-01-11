@@ -13,7 +13,7 @@
 
 ## 使用技術
 
-- **Java**: 11以上  
+- **Java**: 17以上 (jenv使用)
 - **依存ライブラリ**: 
   - Lombok (コード簡素化のため)
   - SLF4J (ロギング用)
@@ -21,9 +21,43 @@
 ## セットアップ
 
 ### 必要条件
-- Java 11以上がインストールされていること
-- Maven または Gradle のインストール
+- Java 17以上がインストールされていること
+- Gradle のインストール
 
+### 初期構築 (for MacOS)
+- java17のインストール
+```shell
+# HomeBrewでjava17をインストール
+$ brew install openjdk@17
+# Brewの指示に従ってシンボリックリンクの作成
+```
+
+- jenvにJava17を登録
+```shell
+$ jenv add $(/usr/libexec/java_home -v 17)
+
+$ jenv versions
+# -> インストールしたjavaのバージョンが表示されれば成功
+
+# java 17を使用するように以下コマンドを実行
+# 全体で設定する場合
+$ jenv global 17
+# プロジェクトごとに設定する場合 (~/.java-version)
+$ jenv local 17
+```
+
+- 環境変数の設定 (すでにjenvを使用したことがある場合は不要)
+```shell
+# ~/.zshrc（または ~/.bash_profile）に以下を追加する
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+```
+
+- javaが正常に設定されていること確認
+```shell
+java -version
+# 設定したJavaのバージョンが表示されれば設定完了
+```
 <!-- ### クローンとビルド
 
 ```bash
