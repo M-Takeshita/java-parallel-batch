@@ -6,26 +6,28 @@ import lombok.Data;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+import org.hibernate.annotations.GenericGenerator;
+
 @Data
 @Entity
 @Table(name = "T_Sales")
 public class TSale {
 
     @Id
-    @Column(columnDefinition = "VARCHAR(36) NOT NULL DEFAULT (UUID())", insertable = false, updatable = false)
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    @Column(columnDefinition = "VARCHAR(36)", updatable = false, nullable = false)
     private String id;
 
     @Column(name = "sale_date", insertable = false, updatable = false,
             columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private LocalDateTime saleDate;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private MUser user;
+    @Column(name="user_id")
+    private String userId;
 
-    @ManyToOne
-    @JoinColumn(name = "product_id", nullable = false)
-    private MProduct product;
+    @Column(name="product_id")
+    private String productId;
 
     @Column(nullable = false)
     private Integer quantity;
