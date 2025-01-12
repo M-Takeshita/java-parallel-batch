@@ -26,7 +26,6 @@ repositories {
 dependencies {
     // This dependency is used by the application.
     implementation libs.guava
-    implementation 'org.springframework.boot:spring-boot-starter-web'  // Webアプリケーション用のSpring Bootスターター
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'  // JPAを使用する場合
     implementation 'org.springframework.boot:spring-boot-starter-batch'
     implementation 'org.springframework.boot:spring-boot-starter-logging'  // ロギング
