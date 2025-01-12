@@ -29,8 +29,11 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'  // Webアプリケーション用のSpring Bootスターター
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'  // JPAを使用する場合
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'  // Thymeleafを使う場合
+    implementation 'org.springframework.boot:spring-boot-starter-batch'
     implementation 'org.springframework.boot:spring-boot-starter-logging'  // ロギング
     testImplementation 'org.springframework.boot:spring-boot-starter-test'  // テスト用のSpring Bootスターター
+
+    runtimeOnly 'mysql:mysql-connector-java:8.0.31' // バージョンは適宜調整
 }
 
 testing {
