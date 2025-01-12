@@ -1,4 +1,4 @@
-package org.model.entity;
+package org.batch.model.entity;
 
 import java.time.LocalDateTime;
 

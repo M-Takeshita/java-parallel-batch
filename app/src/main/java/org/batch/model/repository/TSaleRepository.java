@@ -1,6 +1,6 @@
-package org.model.repository;
+package org.batch.model.repository;
 
-import org.model.entity.TSale;
+import org.batch.model.entity.TSale;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TSaleRepository extends JpaRepository<TSale, String> {
