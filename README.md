@@ -25,6 +25,7 @@
 - Gradle のインストール
 
 ### 初期構築 (for MacOS)
+#### Javaのインストール
 - java17のインストール
 ```shell
 # HomeBrewでjava17をインストール
@@ -58,6 +59,27 @@ eval "$(jenv init -)"
 java -version
 # 設定したJavaのバージョンが表示されれば設定完了
 ```
+
+#### Gradle
+- Gradleのインストール
+```shell
+$ brew install gradle
+
+# バージョンが表示されればOK
+$ gradle -v
+```
+
+### ビルドと実行方法
+```shell
+# ビルド
+$ ./gradlew build
+
+# SpringBootの起動
+$ ./gradlew bootRun
+```
+
+
+
 <!-- ### クローンとビルド
 
 ```bash
